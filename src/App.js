@@ -4,6 +4,9 @@ import { useState} from 'react';
 import { ethers } from 'ethers';
 import './App.css';
 import contract from './contracts/contract.json';
+import logo from './img/wallecto_logo.jpg'
+
+
 
 const contractAddress = "0x1D78F9bD09b0224952B38d050e5FA443Db34f562";
 const abi = contract;
@@ -121,6 +124,9 @@ function App() {
 
   return (
     <div className='main-app'>
+      <div class = "cointainer">
+          <img src={logo} alt="Logo" class = "logo-app"/>
+      </div>
       <h1>OTTIENI I TUOI MATIC</h1>
       <div>
         {currentAccount  ? mintNftButton() : connectWalletButton()}
